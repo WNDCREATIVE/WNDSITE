@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WND Creative Consulting</title>
+    <title>Digital Marketing | WND Creative Consulting</title>
     <style>
         * {
             margin: 0;
@@ -11,23 +11,13 @@
             box-sizing: border-box;
         }
 
-        body, html {
+        html,
+        body {
             width: 100%;
-            height: 100%;
-            overflow: hidden;
-            background-color: #ffffff; 
+            min-height: 100%;
+            background-color: #ffffff;
+            color: #1a1a1a;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .contact-link {
-            display: block;
-            width: 100%;
-            text-decoration: none;
-            color: inherit;
-            cursor: pointer;
         }
 
         .top-menu {
@@ -81,53 +71,66 @@
             display: flex;
         }
 
-        .brand-container {
+        .page-wrap {
+            min-height: 100vh;
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
-            text-align: center;
-            width: 100%;
+            padding: 96px 28px;
         }
 
-        .title-mask {
+        .content {
+            width: min(760px, 100%);
+        }
+
+        .small-brand {
             font-family: 'Arial Black', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            font-size: 25vw; 
+            font-size: 18px;
             font-weight: 900;
+            letter-spacing: -0.05em;
             text-transform: uppercase;
-            letter-spacing: -0.05em; 
-            line-height: 0.9;
-            background: url('https://images.unsplash.com/photo-1532178910-7815d6919875?q=80&w=2000') repeat center center;
-            background-size: 300% cover; 
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: moveCloudsSeamless 50s linear infinite alternate;
+            margin-bottom: 48px;
         }
 
-        .sub-title {
-            font-size: 2.5vw;
-            font-weight: 200; 
-            text-transform: uppercase;
-            letter-spacing: 0.6em; 
-            color: #1a1a1a; 
-            margin-top: 2vh;
-            padding-left: 0.6em; 
-            line-height: 1;
+        h1 {
+            font-size: clamp(34px, 6vw, 76px);
+            font-weight: 300;
+            letter-spacing: -0.04em;
+            line-height: 0.95;
+            margin-bottom: 32px;
         }
 
-        @keyframes moveCloudsSeamless {
-            0% {
-                background-position: 0% 30%;
-            }
-            100% {
-                background-position: 100% 70%;
-            }
+        p {
+            font-size: clamp(17px, 2vw, 21px);
+            font-weight: 300;
+            line-height: 1.6;
+            margin-bottom: 22px;
+        }
+
+        .contact-list {
+            margin-top: 24px;
+        }
+
+        a {
+            color: #1a1a1a;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 34px;
+            font-size: 13px;
+            font-weight: 300;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            opacity: 0.55;
         }
     </style>
 </head>
 <body>
-
         <div class="top-menu">
             <button class="menu-button" type="button" aria-label="Open WND Creative menu" aria-expanded="false">WND</button>
             <nav class="dropdown-menu" aria-label="WND Creative navigation">
@@ -140,12 +143,16 @@
             </nav>
         </div>
 
-    <a href="mailto:hello@wndcreative.com" class="contact-link" aria-label="Email WND Creative">
-        <div class="brand-container">
-            <h1 class="title-mask">WND</h1>
-            <div class="sub-title">CREATIVE</div>
-        </div>
-    </a>
+    <main class="page-wrap">
+        <section class="content">
+            <div class="small-brand">WND Creative Consulting</div>
+            <h1>Digital Marketing</h1>
+            <p>WND Creative helps businesses create a cleaner digital presence across websites, social platforms, and customer-facing channels.</p>
+            <p>The focus is simple: make the brand easier to understand, easier to find, and easier to trust. Digital marketing work may include content direction, campaign planning, social media structure, website messaging, landing page strategy, and digital brand consistency.</p>
+            <p>This page will eventually feature selected digital marketing projects, campaign examples, and visual case studies.</p>
+            <a href="index.html" class="back-link">Back to Home</a>
+        </section>
+    </main>
 
     <script>
         const topMenu = document.querySelector('.top-menu');
