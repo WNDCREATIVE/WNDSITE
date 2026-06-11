@@ -22,6 +22,14 @@
             align-items: center;
         }
 
+        .contact-link {
+            display: block;
+            width: 100%;
+            text-decoration: none;
+            color: inherit;
+            cursor: pointer;
+        }
+
         .brand-container {
             display: flex;
             flex-direction: column;
@@ -38,11 +46,11 @@
             text-transform: uppercase;
             letter-spacing: -0.05em; 
             line-height: 0.9;
-            
+
             /* High-definition monochromatic wispy clouds */
             background: url('https://images.unsplash.com/photo-1532178910-7815d6919875?q=80&w=2000') repeat center center;
             background-size: 300% cover; 
-            
+
             /* Text clipping properties */
             background-clip: text;
             -webkit-background-clip: text;
@@ -75,13 +83,15 @@
 </head>
 <body>
 
-    <div class="brand-container">
-        <!-- Period removed as requested -->
-        <h1 class="title-mask">WND</h1>
-        
-        <!-- Thin, clean, modern subtitle -->
-        <div class="sub-title">CREATIVE</div>
-    </div>
+    <a href="mailto:hello@wndcreative.com" class="contact-link" aria-label="Email WND Creative">
+        <div class="brand-container">
+            <!-- Period removed as requested -->
+            <h1 class="title-mask">WND</h1>
+
+            <!-- Thin, clean, modern subtitle -->
+            <div class="sub-title">CREATIVE</div>
+        </div>
+    </a>
 
 </body>
 </html>
