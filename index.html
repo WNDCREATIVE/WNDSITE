@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WND Landing Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #ffffff; 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .brand-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 100%;
+        }
+
+        .title-mask {
+            font-family: 'Arial Black', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-size: 25vw; 
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: -0.05em; 
+            line-height: 0.9;
+            
+            /* High-definition monochromatic wispy clouds */
+            background: url('https://images.unsplash.com/photo-1532178910-7815d6919875?q=80&w=2000') repeat center center;
+            background-size: 300% cover; 
+            
+            /* Text clipping properties */
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            /* Seamless cloud movement animation */
+            animation: moveCloudsSeamless 50s linear infinite alternate;
+        }
+
+        .sub-title {
+            font-size: 2.5vw;
+            font-weight: 200; 
+            text-transform: uppercase;
+            letter-spacing: 0.6em; 
+            color: #1a1a1a; 
+            margin-top: 2vh;
+            padding-left: 0.6em; 
+            line-height: 1;
+        }
+
+        @keyframes moveCloudsSeamless {
+            0% {
+                background-position: 0% 30%;
+            }
+            100% {
+                background-position: 100% 70%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="brand-container">
+        <!-- Period removed as requested -->
+        <h1 class="title-mask">WND</h1>
+        
+        <!-- Thin, clean, modern subtitle -->
+        <div class="sub-title">CREATIVE</div>
+    </div>
+
+</body>
+</html>
